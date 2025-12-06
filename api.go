@@ -27,7 +27,7 @@ func NewDabAPI(endpoint, outputLocation string, client *http.Client) *DabAPI {
 	}
 }
 
-dablogin := "{teststring}"
+var dablogin := "{teststring}"
 				
 
 resp, err := http.Post(APIURL + "/auth/login", "application/json", bytes.NewBufferString(dabLogin))
