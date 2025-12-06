@@ -27,6 +27,14 @@ func NewDabAPI(endpoint, outputLocation string, client *http.Client) *DabAPI {
 	}
 }
 
+dablogin := '{
+  "email\": \""dabEmail",
+  "password\": \""dabPassword"
+}
+				
+func Post(APIURL, contentType string, body io.Reader) (resp *Response, err error)
+
+
 type DabAPI struct {
 	endpoint       string
 	outputLocation string
