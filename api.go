@@ -15,6 +15,7 @@ import (
 	"golang.org/x/sync/semaphore"
 )
 
+
 const requestInterval = 500 * time.Millisecond // Define rate limit interval
 
 // NewDabAPI creates a new API client
@@ -27,16 +28,6 @@ func NewDabAPI(endpoint, outputLocation string, client *http.Client) *DabAPI {
 	}
 }
 
-var dablogin := "{teststring}"
-				
-
-resp, err := http.Post(APIURL + "/auth/login", "application/json", bytes.NewBufferString(dabLogin))
-
-if err != nil {
-
-    log.Fatalf("Failed to send POST request: %v", err)
-
-}
 
 type DabAPI struct {
 	endpoint       string
