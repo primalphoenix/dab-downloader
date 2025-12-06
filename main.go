@@ -46,6 +46,7 @@ var (
 	ignoreSuffix        string
 	insecure            bool
 	warningBehavior     string = "summary"
+	dabLoginEndpoint    string = "/auth/login"
 )
 
 var rootCmd = &cobra.Command{
