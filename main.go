@@ -641,6 +641,10 @@ func initConfigAndAPI() (*Config, *DabAPI) {
 		config.SpotifyClientID = GetUserInput("Enter your Spotify Client ID", "")
 		config.SpotifyClientSecret = GetUserInput("Enter your Spotify Client Secret", "")
 
+		// Promt for DAB credentials
+		config.DabEmail = GetUserInput("Enter your DAB email address", "")
+		config.DabPassword = GetUserInput("Enter your DAB password", "")
+
 		// Prompt for Navidrome Credentials
 		config.NavidromeURL = GetUserInput("Enter your Navidrome URL", "")
 		config.NavidromeUsername = GetUserInput("Enter your Navidrome Username", "")
@@ -679,6 +683,12 @@ func initConfigAndAPI() (*Config, *DabAPI) {
 	// Command-line flags override config file
 	if apiURL != "" {
 		config.APIURL = apiURL
+	}
+    if dabEmail != "" {
+	config.DabEmail = dabEmail
+	}
+	if dabPassword != "" {
+		config.DabPassword = DabPassword
 	}
 	if downloadLocation != "" {
 		config.DownloadLocation = downloadLocation
