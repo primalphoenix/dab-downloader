@@ -28,6 +28,8 @@ func NewDabAPI(endpoint, outputLocation string, client *http.Client) *DabAPI {
 	}
 }
 
+func dabLogin(dabEmail, dabPassword){
+	loginInfo := 'test'
 
 type DabAPI struct {
 	endpoint       string
