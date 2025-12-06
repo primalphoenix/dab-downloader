@@ -32,8 +32,14 @@ dablogin := '{
   "password\": \""dabPassword"
 }
 				
-func Post(APIURL, contentType string, body io.Reader) (resp *Response, err error)
 
+resp, err := http.Post(APIURL + "/auth/login", "application/json", bytes.NewBufferString(dabLogin))
+
+if err != nil {
+
+    log.Fatalf("Failed to send POST request: %v", err)
+
+}
 
 type DabAPI struct {
 	endpoint       string
