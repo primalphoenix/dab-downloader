@@ -138,7 +138,7 @@ chmod +x auto-dl.sh
 
 ```bash
 # Clone the repository
-git clone https://github.com/PrathxmOp/dab-downloader.git
+git clone https://github.com/primalphoenix/dab-downloader.git
 cd dab-downloader
 
 # Install dependencies and build
